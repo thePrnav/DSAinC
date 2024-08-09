@@ -1,0 +1,86 @@
+Bitwise Operator
+
+AND -> &
+OR  -> |
+NOT -> ~
+XOR -> ^
+
+// ++++++++++++++ AND Operator ++++++++++++++++++++  (x & y = ans )
+
+  i/p         o/p
+x  &  y        =
+0     0        0
+0     1        0
+1     0        0
+1     1        1
+
+// ++++++++++++++++ OR Operator ++++++++++++++++++++ ( x | y = ans )
+
+  i/p         o/p
+x  |  y        =
+0     0        0
+0     1        1
+1     0        1
+1     1        1
+
+// +++++++++++++++++ NOT Operator +++++++++++++++ (~x = ans)
+
+i/p        o/p
+~x          =
+0           1
+1           0
+
+Note :- negative nuumber ko print karane keliye humesha 2's compliment dalte hai , 
+pehle 1's compliment nikalo phir 1 add karo fir 2's compliment milta hai
+
+// ++++++++++++++++++ XOR Operator ++++++++++++ (x^y = ans)
+
+
+  i/p         o/p
+x  ^  y        =
+0     0        0
+0     1        1
+1     0        1
+1     1        0
+
+//_________________________________________________________________________________
+
+// ++++++++++++++++ LEFT shift ++++++++++++++++++++++++++++
+
+eg. 1)
+
+    5 << 1           ( << 1) means ek baar left side mai aage badav [multiplication hota hai]
+
+0000........ 00101  = 5
+        
+        o/p
+0000.........01010 = 10    (move towards left 101) 
+
+eg. 2)
+
+3 << 2              ( << 2) means dobar baar left side mai aage badav 
+
+0000.........0011  = 3
+       o/p
+0000........1100   = 12    (move towards left 11)
+
+Note :- chote chote numbers ke case mai (<< n) n multiply hota hai 
+       . but bade numbers ke case mai value negative ho sakati hai
+
+       eg.   0100..........0000010  after left shift by 1 (<< 1)  value is 1000......00000100  (starting is 1) means negative value
+
+
+//++++++++++++++++ RIGHT shift ++++++++++++++++++++++++++++++++
+
+eg. 1)    5 >> 1          (>> 1) means ek baar right side mai aage badav  [divide hota hai]
+
+0000........00101   = 5
+         o/p
+0000........00001   =  1      (>> 1) means (01 move towards right ) [1 baar divide hoga]  [5/2 = 2 ; 2/2 = 1]
+
+5 >> 2    ( >> 2) means dobar baar right side mai aage badav [ dobaar divde hoga]  [5/(2*2)= 1]
+
+Note :- in +ve number case [<< , >>] -> padding with 0;
+       
+       in -ve number case [<< , >>] ->  padding -> compiler dependent hoti hai
+
